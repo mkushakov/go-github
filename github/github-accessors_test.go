@@ -33011,39 +33011,6 @@ func TestPrivateRegistries_GetTotalCount(tt *testing.T) {
 	p.GetTotalCount()
 }
 
-func TestPrivateRegistry_GetCreatedAt(tt *testing.T) {
-	tt.Parallel()
-	var zeroValue Timestamp
-	p := &PrivateRegistry{CreatedAt: &zeroValue}
-	p.GetCreatedAt()
-	p = &PrivateRegistry{}
-	p.GetCreatedAt()
-	p = nil
-	p.GetCreatedAt()
-}
-
-func TestPrivateRegistry_GetName(tt *testing.T) {
-	tt.Parallel()
-	var zeroValue string
-	p := &PrivateRegistry{Name: &zeroValue}
-	p.GetName()
-	p = &PrivateRegistry{}
-	p.GetName()
-	p = nil
-	p.GetName()
-}
-
-func TestPrivateRegistry_GetRegistryType(tt *testing.T) {
-	tt.Parallel()
-	var zeroValue PrivateRegistryType
-	p := &PrivateRegistry{RegistryType: &zeroValue}
-	p.GetRegistryType()
-	p = &PrivateRegistry{}
-	p.GetRegistryType()
-	p = nil
-	p.GetRegistryType()
-}
-
 func TestPrivateRegistry_GetAccountID(tt *testing.T) {
 	tt.Parallel()
 	var zeroValue string
@@ -33068,10 +33035,7 @@ func TestPrivateRegistry_GetAudience(tt *testing.T) {
 
 func TestPrivateRegistry_GetAuthType(tt *testing.T) {
 	tt.Parallel()
-	var zeroValue PrivateRegistryAuthType
-	p := &PrivateRegistry{AuthType: &zeroValue}
-	p.GetAuthType()
-	p = &PrivateRegistry{}
+	p := &PrivateRegistry{}
 	p.GetAuthType()
 	p = nil
 	p.GetAuthType()
@@ -33097,6 +33061,17 @@ func TestPrivateRegistry_GetClientID(tt *testing.T) {
 	p.GetClientID()
 	p = nil
 	p.GetClientID()
+}
+
+func TestPrivateRegistry_GetCreatedAt(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue Timestamp
+	p := &PrivateRegistry{CreatedAt: &zeroValue}
+	p.GetCreatedAt()
+	p = &PrivateRegistry{}
+	p.GetCreatedAt()
+	p = nil
+	p.GetCreatedAt()
 }
 
 func TestPrivateRegistry_GetDomain(tt *testing.T) {
@@ -33143,6 +33118,25 @@ func TestPrivateRegistry_GetJfrogOidcProviderName(tt *testing.T) {
 	p.GetJfrogOidcProviderName()
 }
 
+func TestPrivateRegistry_GetName(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	p := &PrivateRegistry{Name: &zeroValue}
+	p.GetName()
+	p = &PrivateRegistry{}
+	p.GetName()
+	p = nil
+	p.GetName()
+}
+
+func TestPrivateRegistry_GetRegistryType(tt *testing.T) {
+	tt.Parallel()
+	p := &PrivateRegistry{}
+	p.GetRegistryType()
+	p = nil
+	p.GetRegistryType()
+}
+
 func TestPrivateRegistry_GetReplacesBase(tt *testing.T) {
 	tt.Parallel()
 	var zeroValue bool
@@ -33165,28 +33159,6 @@ func TestPrivateRegistry_GetRoleName(tt *testing.T) {
 	p.GetRoleName()
 }
 
-func TestPrivateRegistry_GetTenantID(tt *testing.T) {
-	tt.Parallel()
-	var zeroValue string
-	p := &PrivateRegistry{TenantID: &zeroValue}
-	p.GetTenantID()
-	p = &PrivateRegistry{}
-	p.GetTenantID()
-	p = nil
-	p.GetTenantID()
-}
-
-func TestPrivateRegistry_GetURL(tt *testing.T) {
-	tt.Parallel()
-	var zeroValue string
-	p := &PrivateRegistry{URL: &zeroValue}
-	p.GetURL()
-	p = &PrivateRegistry{}
-	p.GetURL()
-	p = nil
-	p.GetURL()
-}
-
 func TestPrivateRegistry_GetSelectedRepositoryIDs(tt *testing.T) {
 	tt.Parallel()
 	zeroValue := []int64{}
@@ -33198,6 +33170,17 @@ func TestPrivateRegistry_GetSelectedRepositoryIDs(tt *testing.T) {
 	p.GetSelectedRepositoryIDs()
 }
 
+func TestPrivateRegistry_GetTenantID(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	p := &PrivateRegistry{TenantID: &zeroValue}
+	p.GetTenantID()
+	p = &PrivateRegistry{}
+	p.GetTenantID()
+	p = nil
+	p.GetTenantID()
+}
+
 func TestPrivateRegistry_GetUpdatedAt(tt *testing.T) {
 	tt.Parallel()
 	var zeroValue Timestamp
@@ -33207,6 +33190,17 @@ func TestPrivateRegistry_GetUpdatedAt(tt *testing.T) {
 	p.GetUpdatedAt()
 	p = nil
 	p.GetUpdatedAt()
+}
+
+func TestPrivateRegistry_GetURL(tt *testing.T) {
+	tt.Parallel()
+	var zeroValue string
+	p := &PrivateRegistry{URL: &zeroValue}
+	p.GetURL()
+	p = &PrivateRegistry{}
+	p.GetURL()
+	p = nil
+	p.GetURL()
 }
 
 func TestPrivateRegistry_GetUsername(tt *testing.T) {
@@ -50225,10 +50219,7 @@ func TestUpdateOrganizationPrivateRegistry_GetKeyID(tt *testing.T) {
 
 func TestUpdateOrganizationPrivateRegistry_GetRegistryType(tt *testing.T) {
 	tt.Parallel()
-	var zeroValue PrivateRegistryType
-	u := &UpdateOrganizationPrivateRegistry{RegistryType: &zeroValue}
-	u.GetRegistryType()
-	u = &UpdateOrganizationPrivateRegistry{}
+	u := &UpdateOrganizationPrivateRegistry{}
 	u.GetRegistryType()
 	u = nil
 	u.GetRegistryType()
